@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=The+Nautigal:wght@700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+nav {
+    background: #6236FF;
+    color: #fff;
+    padding: 15px 0;
+    height: 250px;
+}
+.nav-left i {
+    font-size: 40px;
+    cursor: pointer;
+}
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.profile-icon,
+.noti-icon {
+    position: relative;
+}
+.profile-icon img {
+    height: 40px;
+    border-radius: 10px;
+}
+.noti-icon i {
+    font-size: 34px;
+}
+.noti-icon span,
+.profile-icon span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    padding: 0px 7px;
+    border-radius: 50%;
+}
+.profile-icon {
+    margin: 10px 5px 0 10px;
+}
+.profile-icon span{
+    top: -10px;
+    right: -5px;
+}
+.balance-wrap {
+    background: #1e1838;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: -150px;
+    padding: 25px;
+}
+.total-display-blance p {
+    margin-bottom: 5px;
+}
+
+.total-display-blance h1 {
+    font-weight: bold;
+}
+.total-dilplay-card {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #3b294d;
+}
+
+.add-blance-btn {
+    padding: 33px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #342375;
+}
+button.add-blance-btn i {
+    font-size: 50px;
+    color: rgb(182, 178, 178);
+}
+.add-blance-btn {
+    padding: 0 5px;
+    border: none;
+    border-radius: 10px;
+    background: #342375;
+}
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'The Nautigal', cursive; 
+*/
