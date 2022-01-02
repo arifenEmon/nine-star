@@ -3,6 +3,7 @@
 body{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    background-color: #000;
 }
 nav {
     background: #6236FF;
@@ -78,7 +79,7 @@ nav {
 }
 button.add-blance-btn i {
     font-size: 50px;
-    color: rgb(182, 178, 178);
+    color: #8f82a5;
 }
 .add-blance-btn {
     padding: 0 5px;
@@ -118,9 +119,117 @@ button.add-blance-btn i {
 .total-display-option .col-3 .exch{
     background-color: #FFB400;
 }
+.min-dis {
+    background: #161129;
+    padding: 15px 20px;
+    color: #fff;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+.min-dis h3 {
+    margin: 0;
+    margin-top: 5px;
+}
+.min-dis span {
+    color: #8f82a5;
+}
+.min-dis h3 {
+    font-weight: bold;
+}
+.min-dis.imcome h3 {
+    color: #1DCC70;
+}
+.min-dis.expe h3 {
+    color: #FF396F;
+}
 
+.section-title {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
 
+.section-title a {
+    color: #8f82a5;
+    text-decoration: none;
+    margin-right: 5px;
+}
+section.transactions-section {
+    padding: 30px 0;
+}
+.tarans-item {
+    background: #161129;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
 
+.taras-content img {
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.taras-content {
+    display: flex;
+}
+.taras-content h3 {
+    margin: 0;
+}
+.taras-content div {
+    margin-top: 5px;
+}
+span.decrement-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF396F;
+}
+.card-item {
+    background: #778698;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.card-item {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 10px;
+    display: flex !important;
+    justify-content: space-between;
+    color: #fff;
+}
+.card-item span {
+    opacity: 0.5;
+    margin-bottom: 5px;
+    display: block;
+}
+.card-date {
+    display: flex;
+    justify-content: space-between;
+}
+.card-item h1,
+card-item h2,
+card-item h3{
+    font-weight: bold;
+}
+.card-item h2 {
+    font-size: 22px;
+}
+.card-item h3 {
+    font-size: 18px;
+}
+.card-item.card-1{
+    background: #6c7886;
+}
+.card-item.card-2{
+    background: #552FDE;
+}
+.card-item.card-3{
+    background: #1E1E1E;
+}
 
 
 
