@@ -404,7 +404,9 @@ button#x-btn {
     border-radius: 50%;
     padding: 10px 0;
     font-size: 19px;
-    margin: 0 12px;
+    margin-left: auto;
+    width: 50px;
+    margin-right: auto;
 }
 
 .manu-display-option .col-3 {
@@ -443,6 +445,9 @@ button#x-btn {
     background: #6236FF;
     padding: 5px 10px;
     border-radius: 50%;
+    position: relative;
+    height: 50px;
+    width: 50px;
 }
 
 .manu-list-item-left p {
@@ -451,8 +456,10 @@ button#x-btn {
     margin-left: 15px;
 }
 .manu-list-item-left .icon i {
-    position: relative;
-    top: -3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .manu-list-item-right span {
     margin-right: 10px;
