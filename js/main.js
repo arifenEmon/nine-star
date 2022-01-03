@@ -46,8 +46,8 @@ $('.slider-wrap').slick({
     autoplay:true,
     arrows: false,
     speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 8,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1024,
@@ -114,7 +114,7 @@ $('.slider-wrap').slick({
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
           arrows: false
