@@ -353,20 +353,12 @@ footer span {
     font-size: 15px;
 }
 
-/*side manue */
-.manu-page{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.342);
+.manu-page {
+    padding: 0;
+    background-color: #161129;
 }
-.manu-left {
-    background: #161129;
-    width: 80%;
-    height: 100vh;
-}
+
+
 .manu-top-left img {
     height: 45px;
     border-radius: 10px;
@@ -443,6 +435,7 @@ button#x-btn {
 
 .manu-list-item-left {
     display: flex;
+    align-items: center;
 }
 
 .manu-list-item-left .icon {
@@ -469,6 +462,19 @@ button#x-btn {
 }
 .list-title p {
     color: #ffffff7d;
+}
+.offcanvas{
+    background: rgba(0, 0, 0, 0.342);
+}
+.offcanvas-start{
+    width: 80%;
+}
+.manu-list-item-left img {
+    height: 50px;
+    border-radius: 50%;
+}
+.send-money-list {
+    padding: 0 0 20px 0px;
 }
 /* 
 font-family: 'Inter', sans-serif;
