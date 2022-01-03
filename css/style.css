@@ -11,9 +11,12 @@ nav {
     padding: 15px 0;
     height: 250px;
 }
-.nav-left i {
+#manu-btn{
+    background: transparent;
+    border: none;
     font-size: 40px;
     cursor: pointer;
+    color: #fff;
 }
 .logo {
     text-align: center;
@@ -348,6 +351,130 @@ footer p {
 footer span {
     color: #906eb2;
     font-size: 15px;
+}
+
+.manu-page {
+    padding: 0;
+    background-color: #161129;
+}
+
+
+.manu-top-left img {
+    height: 45px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.manu-top-left {display: flex;align-items: center;color: #fff;}
+
+.manu-top {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.manu-top-left h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.manu-top-left p {
+    color: #8555d6;
+    font-size: 15px;
+    margin: 0;
+}
+button#x-btn {
+    border: none;
+    background: transparent;
+    color: #8555d6;
+    font-size: 35px;
+}
+.manu-display {
+    color: #fff;
+    padding: 45px 15px;
+    background: #6236FF;
+}
+
+
+.manu-display-option .col-3 div {
+    background: #4426B2;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 0;
+    font-size: 19px;
+    margin: 0 12px;
+}
+
+.manu-display-option .col-3 {
+    padding: 0;
+}
+.manu-display-option span {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.total-display-blance p {
+    color: #f6f2f2;
+    font-size: 20px;
+}
+.manu-list-wrap {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.manu-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.manu-list-item-left {
+    display: flex;
+    align-items: center;
+}
+
+.manu-list-item-left .icon {
+    font-size: 25px;
+    background: #6236FF;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.manu-list-item-left p {
+    margin: 0;
+    padding: 12px 0;
+    margin-left: 15px;
+}
+.manu-list-item-left .icon i {
+    position: relative;
+    top: -3%;
+}
+.manu-list-item-right span {
+    margin-right: 10px;
+    background: #6236FF;
+    padding: 5px;
+    border-radius: 50%;
+}
+.list-title p {
+    color: #ffffff7d;
+}
+.offcanvas{
+    background: rgba(0, 0, 0, 0.342);
+}
+.offcanvas-start{
+    width: 80%;
+}
+.manu-list-item-left img {
+    height: 50px;
+    border-radius: 50%;
+}
+.send-money-list {
+    padding: 0 0 20px 0px;
 }
 /* 
 font-family: 'Inter', sans-serif;
