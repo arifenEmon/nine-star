@@ -9,7 +9,6 @@ nav {
     background: #6236FF;
     color: #fff;
     padding: 15px 0;
-    height: 250px;
 }
 #manu-btn{
     background: transparent;
@@ -57,8 +56,19 @@ nav {
     background: #1e1838;
     color: #fff;
     border-radius: 20px;
-    margin-top: -150px;
+    position: relative;
     padding: 25px;
+    margin-top: 92px;
+}
+.balance-wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -13px;
+    height: 50%;
+    width: 107%;
+    background: #6236FF;
+    z-index: -1;
 }
 .total-display-blance p {
     margin-bottom: 5px;
