@@ -4,12 +4,12 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     background-color: #000;
+    overflow-x: hidden;
 }
 nav {
     background: #6236FF;
     color: #fff;
     padding: 15px 0;
-    height: 250px;
 }
 #manu-btn{
     background: transparent;
@@ -57,9 +57,20 @@ nav {
     background: #1e1838;
     color: #fff;
     border-radius: 20px;
-    margin-top: -150px;
+    position: relative;
     padding: 25px;
+    margin-top: 92px;
 }
+/* .balance-wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 50%;
+    width: 200%;
+    background: #6236FF;
+    z-index: -1;
+} */
 .total-display-blance p {
     margin-bottom: 5px;
 }
@@ -245,6 +256,8 @@ card-item h3{
 .author img {
     height: 65px;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .author span {
     display: block;
@@ -482,6 +495,21 @@ button#x-btn {
 }
 .send-money-list {
     padding: 0 0 20px 0px;
+}
+
+.balance-section {
+    position: relative;
+}
+
+.balance-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: #6236FF;
+    z-index: -1;
 }
 /* 
 font-family: 'Inter', sans-serif;
