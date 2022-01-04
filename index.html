@@ -32,9 +32,10 @@
                     <div class="nav-right">
                         
                         <div class="noti-icon">
-                            <a href="nityf.html">
+                            
+                            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                                 <i class="bi bi-bell"></i>
-                            </a>
+                            </button>
                             <span>6</span>
                         </div>
                         <div class="profile-icon">
@@ -715,7 +716,7 @@
                                 <i class="bi bi-chevron-right"></i>
                             </div>
                         </div>
-                        <div class="manu-list-item">
+                        <div id="logOut" class="manu-list-item">
                             <div class="manu-list-item-left">
                                 <div class="icon">
                                     <i class="bi bi-box-arrow-right"></i>
@@ -780,8 +781,247 @@
         <!-- offcanvas-body end -->
     </div>
 
-    <section class="login-section">
-        <div class="login-wrap">
+    <section class="notifi">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                    <div class="container p-0">
+                        <div class="header-content">
+                            <div class="top-left">
+                                <a class="btn-close text-reset p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="bi bi-chevron-left"></i></i>
+                                </a>
+                            </div>
+                            <div class="top-title">
+                                <h2>Notifications</h2>
+                            </div>
+                            <div class="top-right">
+                                <a href="#"><i class="bi bi-bell"></i></a>
+                            </div>
+                        </div>   
+                    </div>
+            </div>
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="notifi-box">
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Payment Received</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">John sent you $ 50</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="right-side">
+                                    <i class="bi bi-dot"></i>
+                                    <div class="rgb">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===01====end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#" class="color-1"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Money has been sent</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">The money you sent to John was successfully sent.</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="star">
+                                        <a href="#"><span>3</span></a>
+                                    </div>
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ====02==end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#" class="color-2"><i class="bi bi-key"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Password changed</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">Your password has been changed</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ====03===end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                <div class="down-arrow">
+                                    <a href="#" class="color-3"><i class="bi bi-chat"></i></a>
+                                </div>
+                                <div class="pt">
+                                    <h5><a href="#">New Messages</a></h5>
+                                    <div class="aut">
+                                        <a href="#"><span class="john">You have new messages from John</span></a>
+                                    </div>
+                                    <div class="dt">
+                                        <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =====04===end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Payment Received</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">Your password has been changed</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ====05===end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#" class="color-1"><i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Money has been sent</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">The money you sent to John was successfully sent.</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ====06===end -->
+        
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#" class="color-2"><i class="bi bi-key"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">Password changed</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">Your password has been changed</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                            <!-- ===07==end== -->
+                        <div class="notifi-item">
+                            <div class="text">
+                                <div class="list-item-left">
+                                    <div class="down-arrow">
+                                        <a href="#" class="color-3"><i class="bi bi-chat"></i></a>
+                                    </div>
+                                    <div class="pt">
+                                        <h5><a href="#">New Messages</a></h5>
+                                        <div class="aut">
+                                            <a href="#"><span class="john">You have new messages from John</span></a>
+                                        </div>
+                                        <div class="dt">
+                                            <a href="#"><span class="date">5/3/2020 10:30 am</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="rlt">
+                                        <a href="#"><span><i class="bi bi-chevron-right"></i></span></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+
+
+
+    <section class="login-section p-0">
+        <div class="#login-wrap">
             <div class="login-body">
                 <form>
                     <p class="m-0">Admin : 4321</p>
