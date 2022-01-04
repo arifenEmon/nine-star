@@ -483,10 +483,10 @@ button#x-btn {
 .list-title p {
     color: #ffffff7d;
 }
-.offcanvas{
+.side-manu-wrap.offcanvas{
     background: rgba(0, 0, 0, 0.342);
 }
-.offcanvas-start{
+.side-manu-wrap.offcanvas-start{
     width: 80%;
 }
 .manu-list-item-left img {
@@ -510,6 +510,60 @@ button#x-btn {
     width: 100%;
     background: #6236FF;
     z-index: -1;
+}
+
+
+
+/* login panel */
+
+.login-wrap{
+    background-color: #000000d5;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: 1s;
+    
+}
+.login-body{
+    width: 80%;
+    height: 60%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #6236FF;
+    border-radius: 10px;
+    color: #fff;
+}
+.login-body form {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.login-body form input{
+    margin: 4px 0;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    max-width: 400px;
+}
+.login-body form button{
+    margin-top: 5px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1E1838;
+    box-shadow: .5px .5px 6px #fff;
+    color: #fff;
+}
+.logSuccAdd{
+    left: -100%;
 }
 /* 
 font-family: 'Inter', sans-serif;
