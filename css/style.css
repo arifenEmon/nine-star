@@ -4,7 +4,12 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     background-color: #000;
+    color: #fff;
     overflow-x: hidden;
+}
+body a{
+    text-decoration: none;
+    color:#fff;
 }
 nav {
     background: #6236FF;
@@ -524,7 +529,7 @@ button#x-btn {
     top: 0;
     left: 0;
     z-index: 9999;
-    transition: 1s;
+    transition: .4s;
     
 }
 .login-body{
@@ -564,6 +569,111 @@ button#x-btn {
 }
 .logSuccAdd{
     left: -100%;
+}
+
+
+
+
+/* ===Notifi Css By Ruma Akter==== */
+
+header.fixed-top {
+    border-bottom: 1px solid #ffffff36;
+}
+.header-content{
+    padding: 20px 0;
+    display: flex;
+    background: #000;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff36;
+}
+.header-content .top-left i{
+    font-size: 26px;
+    color:#6236FF;
+    padding-left: 15px;
+}
+.header-content .top-title h2{
+    padding-left: 50px;
+    margin-top: 10px;
+}
+.header-content .top-right i{
+    margin-left: 60px;
+    font-size: 26px;
+    color: #6236FF;
+}
+
+.notifi-box{
+    margin-top: 90px;
+}
+.notifi-item {
+    border-bottom: 1px solid #ffffff36;
+}
+.notifi-item:hover {
+    background: #161129;
+}
+.notifi-item .text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.down-arrow a{
+    background:  #6236FF;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 21px;
+    border-radius: 50%;
+    color:#fff;
+    position: relative;
+    display: block;
+}
+.text .pt{
+    padding: 10px 20px;
+}
+.text .pt span{
+    color:rgb(141, 136, 136);
+}
+.right-side .bi-dot{
+    color:#6236FF;
+    font-size: 60px;
+    position: relative;
+    top: -4px;
+}
+.right-side span i{
+    color:#8372e4;
+    font-size: 22px;
+}
+
+.list-item-left {
+    display: flex;
+    align-items: center;
+}
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    padding: 3px 10px;
+    background: #6236FF;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+.down-arrow a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text .down-arrow .color-1 {
+    background: #1DCC70;
+}
+.text .down-arrow .color-2 {
+    background: #FF396F;
+}
+.text .down-arrow .color-3 {
+    background: #FFB400;
 }
 /* 
 font-family: 'Inter', sans-serif;
