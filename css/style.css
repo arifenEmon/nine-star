@@ -744,6 +744,9 @@ header.fixed-top {
     margin: 15px 0;
     cursor: pointer;
 }
+.aco-person h2 {
+    font-size: 25px;
+}
 .account-single-item:hover {
     background: #493b81;
 }
