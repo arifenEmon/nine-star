@@ -602,7 +602,6 @@ header.fixed-top {
     color:#ffffff;
 }
 .header-content .top-title h2{
-    padding-left: 50px;
     margin-top: 10px;
 }
 .header-content .top-right i{
@@ -613,7 +612,7 @@ header.fixed-top {
     border-bottom: 1px solid #ffffff36;
 }
 .notifi-item:hover {
-    background: #161129;
+    background: #473a7e;
 }
 .notifi-item .text{
     display: flex;
@@ -684,16 +683,80 @@ header.fixed-top {
 
 /* nitifi motifi */
 .notifi .offcanvas-header{
-    background: #000;
+    background: #161129;
 }
 .notifi .offcanvas {
     height: 100vh;
 }
 .notifi .offcanvas-body{
-    background-color: #000;
+    background-color: #161129;
     padding: 0;
 }
 
+/* profile offcamvas */
+.profile-panel .offcanvas-header {
+    background: #161129;
+}
+.profile-panel .offcanvas-body{
+    background-color: #000;
+}
+.profile-panel .offcanvas-end{
+    width: 100%;
+}
+.profile-box-wrap {
+    margin: 15px 0;
+    position: relative;
+}
+.upload-profil {
+    position: absolute;
+    left: 57%;
+    bottom: 0;
+    background: #6236FF;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+.upload-profil i {
+    font-size: 20px;
+}
+.profile-img {
+    height: 150px;
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-img img {
+    height: 100%;
+}
+.accounts-box-wrap h3 {
+    color: #5c4d96;
+    font-size: 22px;
+}
+.account-single-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161129;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.account-single-item:hover {
+    background: #493b81;
+}
+.aco-person-img img {
+    height: 100%;
+}
+
+.aco-person-img {
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
 /* 
 font-family: 'Inter', sans-serif;
 font-family: 'The Nautigal', cursive; 
