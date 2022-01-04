@@ -450,7 +450,15 @@ button#x-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
+    padding: 8px 0;
+    cursor: pointer;
+    border-top: 1px solid #fff0;
+    border-bottom: 1px solid #fff0;
+}
+.manu-list-item:hover {
+    border-bottom: 1px solid #ffffff69;
+    border-top: 1px solid #ffffff69;
+    background: #322661;
 }
 
 .manu-list-item-left {
@@ -522,7 +530,7 @@ button#x-btn {
 /* login panel */
 
 .login-wrap{
-    background-color: #000000d5;
+    background-color: #000000ee;
     height: 100vh;
     width: 100%;
     position: fixed;
