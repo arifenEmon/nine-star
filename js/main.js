@@ -1,3 +1,35 @@
+// Login page progrem; 
+let loginWarp = document.querySelector('.login-wrap');
+let adminIn = document.getElementById('admin');
+let passIn = document.getElementById('password');
+let loginBtn = document.getElementById('loginBtn');
+let passCode = 4321;
+loginBtn.addEventListener('click', (e) =>{
+  e.preventDefault()
+  // adminIn = parseInt(adminIn);
+  // passIn = parseInt(passIn);
+console.log(typeof(parseFloat(adminIn.value)));
+  if((parseFloat(adminIn.value )=== passCode) && (parseFloat(passIn.value) === passCode)){
+    // loginWarp.style.display = 'none'
+    loginWarp.classList.add('logSuccAdd')
+
+  }else{
+    alert('hoyni')
+  }
+
+})
+// loginWarp.style.display = 'none'
+
+
+
+
+
+
+
+
+
+
+
 $('.slider-wrap').slick({
     dots: false,
     infinite: true,
