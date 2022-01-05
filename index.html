@@ -38,7 +38,7 @@
                             <span>6</span>
                         </div>
                         <div class="profile-icon">
-                            <img data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" src="img/avatar7.jpg" alt="jakiya">
+                            <img class="logedProfileImg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" src="img/avatar7.jpg" alt="jakiya">
                             <span>4</span>
                         </div>
                     
@@ -53,8 +53,8 @@
            <div class="balance-wrap">
                 <div class="total-dilplay-card">
                     <div class="total-display-blance">
-                        <p>Total Blance</p>
-                        <h1>$ 2,562.50</h1>
+                        <p>Total Amount</p>
+                        <h1 id="totalAmount">$ 00.00</h1>
                     </div>
                     <div>
                         <button class="add-blance-btn">
@@ -98,28 +98,28 @@
             <div class="row">
                 <div class="col-6">
                     <div class="min-dis imcome">
-                        <span>Income</span>
-                        <h3>$ 552.95</h3>
+                        <span>Savings</span>
+                        <h3 id="logedSaving">$ 00.0</h3>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="min-dis expe">
-                        <span>Expenses</span>
-                        <h3>$ 86.45</h3>
+                        <span>Debts</span>
+                        <h3 id="logedDebts">$ 00.0</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="min-dis bills">
-                        <span>Total Bills</span>
-                        <h3>$ 53.25</h3>
+                        <span>Present Balance</span>
+                        <h3 class="logedPresentBalance">$ 00.0</h3>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="min-dis save">
-                        <span>Savings</span>
-                        <h3>$ 120.99</h3>
+                        <span>Total Balance</span>
+                        <h3 id="logedoTalBalance">$ 00.0</h3>
                     </div>
                 </div>
             </div>
@@ -579,10 +579,10 @@
                 <div class="container">
                     <div class="manu-top">
                         <div class="manu-top-left">
-                            <img src="img/avatar7.jpg" alt="jakiya">
+                            <img class="logedProfileImg" src="img/avatar7.jpg" alt="jakiya">
                             <div>
-                                <h2>Beatriz Brito</h2>
-                                <p>60628532</p>
+                                <h2 class="logedProfileName">Beatriz Brito</h2>
+                                <p id="logedProfileNumber">60628532</p>
                             </div>
                         </div>
                         <button id="x-btn" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -597,7 +597,7 @@
                             <div class="manu-dilplay-card">
                                 <div class="total-display-blance">
                                     <p>Balance</p>
-                                    <h1>$ 2,562.50</h1>
+                                    <h1 class="logedPresentBalance">$ 00.00</h1>
                                 </div>
                             </div>
                             <div class="manu-display-option">
@@ -1041,86 +1041,87 @@
             <div class="container">
                 <div class="profile-box-wrap">
                     <div class="profile-img">
-                        <img src="img/avatar7.jpg" alt="author">
+                        <img class="logedProfileImg" src="img/person/0.png" alt="author">
                     </div>
                     <div class="upload-profil">
                         <i class="bi bi-camera"></i>
                     </div>
                 </div>
+                <h2 class="logedProfileName">Arifen Emon</h2>
                 <div class="accounts-box-wrap">
                     <h3>Account</h3>
                     <!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Jannat Akter</h2>
+                            <h2 class="singelAccountName m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar4.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div>
                     <!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Mariya</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar2.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Muna</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar7.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Eva Akter</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar10.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">MH Meraj</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar2.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">MH Jibon</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar3.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Afsana Akter</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar4.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Rifa Tasnim</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar8.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div><!-- account-1 -->
                     <div class="account-single-item">
                         <div class="aco-person">
-                            <h2 class="m-0">Nazma Akter</h2>
+                            <h2 class="singelAccountName" m-0"></h2>
                         </div>
                         <div class="aco-person-img">
-                            <img src="img/avatar9.jpg" alt="author">
+                            <img class="singelAccountImg" src="#" alt="author">
                         </div>
                     </div>
 

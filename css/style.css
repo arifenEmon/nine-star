@@ -707,10 +707,13 @@ header.fixed-top {
     margin: 15px 0;
     position: relative;
 }
+.logedProfileName {
+    text-align: center;
+}
 .upload-profil {
     position: absolute;
-    left: 57%;
-    bottom: 0;
+    left: 53%;
+    bottom: -5px;
     background: #6236FF;
     padding: 10px 15px;
     border-radius: 50%;
