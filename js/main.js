@@ -7,6 +7,74 @@ let loginBtn = document.getElementById('loginBtn');
 let logOut = document.getElementById('logOut');
 let passCode = 4321;
 
+
+function dataLoad(){
+  let singelAccountNames = document.querySelectorAll('.singelAccountName');
+  let singelAccountImgs = document.querySelectorAll('.singelAccountImg');
+  let singleAccountItem = document.querySelectorAll('.account-single-item');
+  let logedProfileImgs = document.querySelectorAll('.logedProfileImg')
+  let logedProfileNams = document.querySelectorAll('.logedProfileName');
+  let logedProfileNumber = document.getElementById('logedProfileNumber')
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', '/js/data.json', true);
+
+  xhr.onload = function(){
+    if(this.status === 200){
+      let person = JSON.parse(this.responseText).person;
+
+      for(let i = 0 ; i < person.length; i++){
+        singelAccountNames[i].innerHTML = person[i].name;
+        singelAccountImgs[i].setAttribute('src', person[i].profilePic);
+
+        singleAccountItem[i].addEventListener('click', ()=>{
+          logedProfileNumber.innerHTML = person[i].phone;
+          for(let j=0; j < logedProfileImgs.length ; j++){
+
+            logedProfileImgs[j].setAttribute('src', person[i].profilePic);
+          }
+          for(let j=0; j < logedProfileNams.length; j++){
+
+            logedProfileNams[j].innerHTML = person[i].name;
+          }
+          
+          
+         
+          
+        })
+      }
+
+      
+    }
+    else{
+      alert("can't get data")
+    }
+  }
+
+  xhr.send()
+}
+
+
+
+
+dataLoad()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // loginBtn.addEventListener('click', (e) =>{
 //   e.preventDefault()
 //   // adminIn = parseInt(adminIn);
@@ -22,23 +90,12 @@ let passCode = 4321;
 
 // })
 
+
 logOut.addEventListener('click', ()=>{
   
   location.reload()
 
 })
-// loginWarp.style.display = 'none'
-
-
-
-
-
-
-
-
-
-
-
 $('.slider-wrap').slick({
     dots: false,
     infinite: true,
@@ -76,9 +133,6 @@ $('.slider-wrap').slick({
           arrows: false
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
   $('.author-slider-wrap').slick({
@@ -118,9 +172,6 @@ $('.slider-wrap').slick({
           arrows: false
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -161,9 +212,6 @@ $('.slider-wrap').slick({
           arrows: false
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -208,8 +256,5 @@ $('.slider-wrap').slick({
           arrows: false
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
