@@ -16,42 +16,52 @@ function dataLoad(){
   let logedProfileNams = document.querySelectorAll('.logedProfileName');
   let logedProfileNumber = document.getElementById('logedProfileNumber')
 
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://arifenemon.github.io/jsonAPI/data.json', true);
+  // let xhr = new XMLHttpRequest();
+  // xhr.open('GET', 'https://arifenemon.github.io/jsonAPI/data.json', true);
+  
+  // xhr.onload = function(){
+    // if(this.status === 200){
 
-  xhr.onload = function(){
-    if(this.status === 200){
-      let person = JSON.parse(this.responseText).person;
 
-      for(let i = 0 ; i < person.length; i++){
-        singelAccountNames[i].innerHTML = person[i].name;
-        singelAccountImgs[i].setAttribute('src', person[i].profilePic);
+      // let person = JSON.parse(this.responseText).person;
+      // console.log(person)[i].name;
+      fetch('https://arifenemon.github.io/jsonAPI/data.json')
+      .then(res=> res.json())
+      .then(nineSter=> {
+        let person = nineSter.person;
 
-        singleAccountItem[i].addEventListener('click', ()=>{
-          logedProfileNumber.innerHTML = person[i].phone;
-          for(let j=0; j < logedProfileImgs.length ; j++){
-
-            logedProfileImgs[j].setAttribute('src', person[i].profilePic);
-          }
-          for(let j=0; j < logedProfileNams.length; j++){
-
-            logedProfileNams[j].innerHTML = person[i].name;
-          }
+        for(let i = 0 ; i < person.length; i++){
+          singelAccountNames[i].innerHTML = person[i].name;
+          singelAccountImgs[i].setAttribute('src', person[i].profilePic);
+  
+          singleAccountItem[i].addEventListener('click', ()=>{
+            logedProfileNumber.innerHTML = person[i].phone;
+            for(let j=0; j < logedProfileImgs.length ; j++){
+  
+              logedProfileImgs[j].setAttribute('src', person[i].profilePic);
+            }
+            for(let j=0; j < logedProfileNams.length; j++){
+  
+              logedProfileNams[j].innerHTML = person[i].name;
+            }
+            
+            
           
-          
-         
-          
-        })
-      }
+          })
+        }
+      })
+      
 
       
-    }
-    else{
-      alert("can't get data")
-    }
-  }
+    // }
+    // else{
+    //   alert("can't get data")
+    // }
+  // }
 
-  xhr.send()
+
+  
+  // xhr.send()
 }
 
 

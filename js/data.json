@@ -7,7 +7,7 @@
             "presentBalance" : 0.00,
             "totalBalance" : 0.00,
             "phone" : 8801760628532,
-            "profilePic" : "/img/person/0.png"
+            "profilePic" : "../img/person/0.png"
         },
         {
             "name" : "NH Jolok",
