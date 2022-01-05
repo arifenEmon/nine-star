@@ -17,9 +17,8 @@ function dataLoad(){
   let logedProfileNumber = document.getElementById('logedProfileNumber');
   let logedSaving = document.getElementById('logedSaving');
   let logedDebts = document.getElementById('logedDebts');
-  let logedoTalBalance = document.getElementById('logedoTalBalance');
-  let logedPresentBalance = document.getElementsByClassName('logedPresentBalance');
-  console.log(logedPresentBalance);
+  let totalDebt = document.getElementsByClassName('totalDebt');
+  let loanBalance = document.getElementById('loanBalance');
 
   fetch('https://arifenemon.github.io/jsonAPI/data.json')
   .then(res=> res.json())
@@ -34,7 +33,7 @@ function dataLoad(){
         logedProfileNumber.innerHTML = person[i].phone;
         logedSaving.innerHTML = person[i].savings;
         logedDebts.innerHTML = person[i].debts;
-        logedoTalBalance.innerHTML = person[i].totalBalance;
+        loanBalance.innerHTML = person[i].loanBalance;
 
         for(let j=0; j < logedProfileImgs.length ; j++){
           logedProfileImgs[j].setAttribute('src', person[i].profilePic);
@@ -42,8 +41,8 @@ function dataLoad(){
         for(let j=0; j < logedProfileNams.length; j++){
           logedProfileNams[j].innerHTML = person[i].name;
         }
-        for(let j=0; j < logedPresentBalance.length; j++){
-          logedPresentBalance[j].innerHTML = person[i].presentBalance;
+        for(let j=0; j<totalDebt.length; j++){
+          totalDebt[j].innerHTML = person[i].totalDabt;
         }
         
         
