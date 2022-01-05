@@ -17,7 +17,7 @@ function dataLoad(){
   let logedProfileNumber = document.getElementById('logedProfileNumber')
 
   let xhr = new XMLHttpRequest();
-  xhr.open('GET', '/js/data.json', true);
+  xhr.open('GET', 'https://arifenemon.github.io/jsonAPI/data.json', true);
 
   xhr.onload = function(){
     if(this.status === 200){
