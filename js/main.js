@@ -14,58 +14,44 @@ function dataLoad(){
   let singleAccountItem = document.querySelectorAll('.account-single-item');
   let logedProfileImgs = document.querySelectorAll('.logedProfileImg')
   let logedProfileNams = document.querySelectorAll('.logedProfileName');
-  let logedProfileNumber = document.getElementById('logedProfileNumber')
+  let logedProfileNumber = document.getElementById('logedProfileNumber');
+  let logedSaving = document.getElementById('logedSaving');
+  let logedDebts = document.getElementById('logedDebts');
+  let logedoTalBalance = document.getElementById('logedoTalBalance');
+  let logedPresentBalance = document.getElementsByClassName('logedPresentBalance');
+  console.log(logedPresentBalance);
 
-  // let xhr = new XMLHttpRequest();
-  // xhr.open('GET', 'https://arifenemon.github.io/jsonAPI/data.json', true);
-  
-  // xhr.onload = function(){
-    // if(this.status === 200){
+  fetch('https://arifenemon.github.io/jsonAPI/data.json')
+  .then(res=> res.json())
+  .then(nineSter=> {
+    let person = nineSter.person;
 
+    for(let i = 0 ; i < person.length; i++){
+      singelAccountNames[i].innerHTML = person[i].name;
+      singelAccountImgs[i].setAttribute('src', person[i].profilePic);
 
-      // let person = JSON.parse(this.responseText).person;
-      // console.log(person)[i].name;
-      fetch('https://arifenemon.github.io/jsonAPI/data.json')
-      .then(res=> res.json())
-      .then(nineSter=> {
-        let person = nineSter.person;
+      singleAccountItem[i].addEventListener('click', ()=>{
+        logedProfileNumber.innerHTML = person[i].phone;
+        logedSaving.innerHTML = person[i].savings;
+        logedDebts.innerHTML = person[i].debts;
+        logedoTalBalance.innerHTML = person[i].totalBalance;
 
-        for(let i = 0 ; i < person.length; i++){
-          singelAccountNames[i].innerHTML = person[i].name;
-          singelAccountImgs[i].setAttribute('src', person[i].profilePic);
-  
-          singleAccountItem[i].addEventListener('click', ()=>{
-            logedProfileNumber.innerHTML = person[i].phone;
-            for(let j=0; j < logedProfileImgs.length ; j++){
-  
-              logedProfileImgs[j].setAttribute('src', person[i].profilePic);
-            }
-            for(let j=0; j < logedProfileNams.length; j++){
-  
-              logedProfileNams[j].innerHTML = person[i].name;
-            }
-            
-            
-          
-          })
+        for(let j=0; j < logedProfileImgs.length ; j++){
+          logedProfileImgs[j].setAttribute('src', person[i].profilePic);
         }
+        for(let j=0; j < logedProfileNams.length; j++){
+          logedProfileNams[j].innerHTML = person[i].name;
+        }
+        for(let j=0; j < logedPresentBalance.length; j++){
+          logedPresentBalance[j].innerHTML = person[i].presentBalance;
+        }
+        
+        
       })
+    }
+  })
       
-
-      
-    // }
-    // else{
-    //   alert("can't get data")
-    // }
-  // }
-
-
-  
-  // xhr.send()
 }
-
-
-
 
 dataLoad()
 
