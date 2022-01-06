@@ -15,6 +15,7 @@ let passCode = 4321;
 
 
 function dataLoad(){
+  window.localStorage.clear();
   let singelAccountNames = document.querySelectorAll('.singelAccountName');
   let singelAccountImgs = document.querySelectorAll('.singelAccountImg');
   let singleAccountItem = document.querySelectorAll('.account-single-item');
@@ -66,6 +67,24 @@ function dataLoad(){
 
 dataLoad()
 
+
+// reload add
+function refresh(event){
+  let ref = document.getElementById('ref');
+  let touch = event.targetTouches[0];
+  let y = touch.pageY;
+  // console.log(y);
+  if(y > 00 && y < 80){
+    ref.style.height = y+'px';
+    ref.style.maxHeight= '80px';
+    ref.style.transition = '.3s'
+  }
+  if(y > 0 && y < 80){
+    ref.style.height = '50px'
+    ref.style.transition = '.2s';
+    setTimeout(function(){location.reload(), 500} )
+  }
+}
 
 
 
