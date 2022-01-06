@@ -1,8 +1,4 @@
 
-
-
-
-
 // Login page progrem; 
 let loginWarp = document.querySelector('.login-wrap');
 let adminIn = document.getElementById('admin');
@@ -11,7 +7,6 @@ let loginBtn = document.getElementById('loginBtn');
 let logOut = document.getElementById('logOut');
 let liveAmount = document.getElementById('liveAmount')
 let passCode = 4321;
-
 
 
 
@@ -80,7 +75,6 @@ function dataLoad(){
     // Our_Members_program
     for(let i = 0 ; i < person.length ; i++){
       ourMembers(person[i].name, person[i].profilePic)
-      console.log(person[i].profilePic);
     }
     function ourMembers(name, photo){
       // creat_tag
@@ -90,8 +84,8 @@ function dataLoad(){
       const span = document.createElement('span')
       // append_tag
       mainDive.appendChild(div2)
-      div2.appendChild(span)
       div2.appendChild(imgTag)
+      div2.appendChild(span)
       span.innerText = name
       document.getElementById('cvbfhg').appendChild(mainDive)
 
@@ -105,7 +99,6 @@ function dataLoad(){
     for (let i = 0; i < transactions.length; i++) {
       transactionFunction(transactions[i].photo,transactions[i].name,transactions[i].balance,transactions[i].title)
     }
-    console.log(transactions[1].name);
     function transactionFunction(photoLink,name,balanceText,title){
       //creat_tag
       const divTagMain = document.createElement('div');
@@ -375,3 +368,19 @@ function refresh(event){
       ]
     });
   }, 500);
+
+
+
+  // Click-Sound
+  let clickAudio = new Audio('/audio/0.wav')
+setTimeout(()=>{
+  let clickSoundEle = [document.querySelectorAll('.min-dis'),document.querySelectorAll('.tarans-item'),document.querySelectorAll('.author'),document.querySelectorAll('.bill-card'),document.querySelectorAll('.prog'),document.querySelectorAll('.news-card'),document.querySelectorAll('.clickToSound'),document.querySelectorAll('.account-single-item')]
+  clickSoundEle.forEach((item)=>{
+    item.forEach((itemAddEven)=>{
+      itemAddEven.addEventListener('click',()=>{
+        clickAudio.play()
+      })
+    })
+    
+  })
+},1000)
