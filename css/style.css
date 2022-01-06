@@ -164,6 +164,14 @@ button.add-blance-btn i {
     margin-top: 22px;
     border-radius: 10px;
 }
+.min-dis:hover,
+.tarans-item:hover,
+.author:hover,
+.bill-card:hover,
+.prog:hover,
+.news-card:hover{
+    background: #493b81;
+}
 .min-dis h3 {
     margin: 0;
     margin-top: 5px;
@@ -316,7 +324,7 @@ card-item h3{
 }
 .bill-card button {
     border: navajowhite;
-    background: #6236FF;
+    background: #3902fd;
     color: #fff;
     font-weight: bold;
     width: 100%;
@@ -361,6 +369,7 @@ card-item h3{
     overflow: hidden;
     border-radius: 10px;
     margin: 10px 5px;
+    height: 300px;
 }
 
 .news-card img {
