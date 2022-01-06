@@ -5,6 +5,12 @@ let adminIn = document.getElementById('admin');
 let passIn = document.getElementById('password');
 let loginBtn = document.getElementById('loginBtn');
 let logOut = document.getElementById('logOut');
+let liveAmount = document.getElementById('liveAmount')
+
+
+
+
+
 let passCode = 4321;
 
 
@@ -19,13 +25,18 @@ function dataLoad(){
   let logedDebts = document.getElementById('logedDebts');
   let totalDebt = document.getElementsByClassName('totalDebt');
   let loanBalance = document.getElementById('loanBalance');
-
-  fetch('https://arifenemon.github.io/jsonAPI/data.json')
+  let liveAmount = document.getElementById('liveAmount');
+  
+  fetch('https://arifenemon.github.io/jsonAPI/data.json', {cache : 'reload'})
   .then(res=> res.json())
   .then(nineSter=> {
     let person = nineSter.person;
+    liveAmount.innerText = nineSter.liveAmmount;
 
     for(let i = 0 ; i < person.length; i++){
+
+      
+      
       singelAccountNames[i].innerHTML = person[i].name;
       singelAccountImgs[i].setAttribute('src', person[i].profilePic);
 
@@ -34,6 +45,7 @@ function dataLoad(){
         logedSaving.innerHTML = person[i].savings;
         logedDebts.innerHTML = person[i].debts;
         loanBalance.innerHTML = person[i].loanBalance;
+        
 
         for(let j=0; j < logedProfileImgs.length ; j++){
           logedProfileImgs[j].setAttribute('src', person[i].profilePic);

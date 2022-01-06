@@ -733,7 +733,7 @@ header.fixed-top {
 .profile-img img {
     height: 100%;
 }
-.accounts-box-wrap h3 {
+#accounts-box-wrap h3 {
     color: #5c4d96;
     font-size: 22px;
 }
