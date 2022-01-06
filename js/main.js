@@ -1,8 +1,4 @@
 
-
-
-
-
 // Login page progrem; 
 let loginWarp = document.querySelector('.login-wrap');
 let adminIn = document.getElementById('admin');
@@ -11,7 +7,6 @@ let loginBtn = document.getElementById('loginBtn');
 let logOut = document.getElementById('logOut');
 let liveAmount = document.getElementById('liveAmount')
 let passCode = 4321;
-
 
 
 
@@ -31,7 +26,7 @@ function dataLoad(){
   
 
   // API_connect_to_site_program
-  fetch('https://arifenemon.github.io/jsonAPI/data.json', {cache : 'reload'})
+  fetch('https://arifenemon.github.io/jsonAPI2/data.json', {cache : 'reload'})
   .then(res=> res.json())
   .then(nineSter=> {
     let person = nineSter.person;
@@ -39,8 +34,6 @@ function dataLoad(){
     let transactions = nineSter.transactions;
     liveAmount.innerText = nineSter.liveAmmount;
 
-    console.log(transactions);
-  
     for(let i = 0 ; i < person.length; i++){
       // Profile_photo_and_name_Program.
       singelAccountNames[i].innerHTML = person[i].name;
@@ -77,11 +70,35 @@ function dataLoad(){
     }
 
 
+  
+
+    // Our_Members_program
+    for(let i = 0 ; i < person.length ; i++){
+      ourMembers(person[i].name, person[i].profilePic)
+    }
+    function ourMembers(name, photo){
+      // creat_tag
+      const mainDive = document.createElement('div')
+      const div2 = document.createElement('div')
+      const imgTag = document.createElement('img')
+      const span = document.createElement('span')
+      // append_tag
+      mainDive.appendChild(div2)
+      div2.appendChild(imgTag)
+      div2.appendChild(span)
+      span.innerText = name
+      document.getElementById('cvbfhg').appendChild(mainDive)
+
+      // set_attribut
+      mainDive.setAttribute('class', `col-3 col-md-2 ml-3 p-0`)
+      div2.setAttribute('class' , 'author')
+      imgTag.setAttribute('src', photo)
+    }
+
     // Transactions_programs
     for (let i = 0; i < transactions.length; i++) {
       transactionFunction(transactions[i].photo,transactions[i].name,transactions[i].balance,transactions[i].title)
     }
-    console.log(transactions[1].name);
     function transactionFunction(photoLink,name,balanceText,title){
       //creat_tag
       const divTagMain = document.createElement('div');
@@ -193,125 +210,124 @@ function refresh(event){
 
 
 // slider-Prograam
-$('.slider-wrap').slick({
-    dots: false,
-    infinite: true,
-    autoplay:true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false
-        }
-      }
-    ]
-  });
-  $('.author-slider-wrap').slick({
-    dots: false,
-    infinite: true,
-    autoplay:true,
-    arrows: false,
-    speed: 300,
-    slidesToShow: 8,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false
-        }
-      }
-    ]
-  });
-  $('.bill-card-wrap').slick({
-    dots: false,
-    infinite: true,
-    autoplay:true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          dots: false,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false
-        }
-      }
-    ]
-  });
-
   setTimeout(() => {
+    $('.slider-wrap').slick({
+      dots: false,
+      infinite: true,
+      autoplay:true,
+      arrows: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false
+          }
+        }
+      ]
+    });
+    $('.author-slider-wrap').slick({
+      dots: false,
+      infinite: true,
+      autoplay:true,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 8,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false
+          }
+        }
+      ]
+    });
+    $('.bill-card-wrap').slick({
+      dots: false,
+      infinite: true,
+      autoplay:true,
+      arrows: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false
+          }
+        }
+      ]
+    });
     $('#klklkl').slick({
       dots: false,
       infinite: true,
@@ -352,3 +368,19 @@ $('.slider-wrap').slick({
       ]
     });
   }, 500);
+
+
+
+  // Click-Sound
+  let clickAudio = new Audio('/audio/0.wav')
+setTimeout(()=>{
+  let clickSoundEle = [document.querySelectorAll('.min-dis'),document.querySelectorAll('.tarans-item'),document.querySelectorAll('.author'),document.querySelectorAll('.bill-card'),document.querySelectorAll('.prog'),document.querySelectorAll('.news-card'),document.querySelectorAll('.clickToSound'),document.querySelectorAll('.account-single-item')]
+  clickSoundEle.forEach((item)=>{
+    item.forEach((itemAddEven)=>{
+      itemAddEven.addEventListener('click',()=>{
+        clickAudio.play()
+      })
+    })
+    
+  })
+},1000)
